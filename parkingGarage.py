@@ -7,7 +7,8 @@ class parkingGarage():
         self.tickets = [20]
         self.parkingSpaces = [20]
         self.currentTicket = {'paid' : False}
-        self.bank = []
+        #just throwing this in to maybe have some fun with a print statement later; "Look at all the money our parking garage has made!"
+        self.bank = 0
         
         
         pass
@@ -28,16 +29,16 @@ class parkingGarage():
             x = input('Gimme all your money, how much you got???')
             if isinstance(x, int):
                 self.currentTicket['paid'] = False
-                self.parkingSpaces += 1
-                self.tickets += 1
+                self.parkingSpaces[0] += 1
+                self.tickets[0] += 1
                 self.bank += x
                 print('That works, have a great day!')
             else:
                 # Just trying to have some fun with error handling
                 y = input("Don't make me bust a kneecap, give me a number. . . ")
                 self.currentTicket['paid'] = False
-                self.parkingSpaces += 1
-                self.tickets += 1
+                self.parkingSpaces[0] += 1
+                self.tickets[0] += 1
                 self.bank += y
                 print('That works, have a great day!')
 
